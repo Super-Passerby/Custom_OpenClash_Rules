@@ -4,15 +4,15 @@
 REPO_API_URL="https://api.github.com/repos/vernesong/OpenClash/contents/dev?ref=package"
 RAW_FILE_PREFIX="https://gh-proxy.com/https://raw.githubusercontent.com/vernesong/OpenClash/package/dev"
 
+# 清空屏幕并显示欢迎信息
 clear
 echo "##########################################################"
 echo "#                Custom_OpenClash_Rules                  #"
 echo "# https://github.com/Aethersailor/Custom_OpenClash_Rules #"
 echo "##########################################################"
 sleep 1
-#echo "Custom_OpenClash_Rules 一键设置脚本开始运行..."
+echo "OpenClash dev 一键安装/更新脚本开始运行..."
 echo "即将安装/升级插件和内核至最新 dev 版本，并更新所有数据库、白名单、订阅至最新版"
-# echo "并修改 OpenClash 设置为本项目的设置方案"
 sleep 1
 
 # 检测系统使用的包管理器，并设置对应后缀和安装命令
