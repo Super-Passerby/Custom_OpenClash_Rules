@@ -12,7 +12,7 @@ geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
   geosite: "https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
   mmdb: "https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb"
-  asn "https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb"
+  asn: "https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb"
 
 geo-auto-update: true # 是否自动更新 geodata
 geo-update-interval: 24 # 更新间隔，单位：小时
@@ -133,6 +133,26 @@ proxy-groups:
     interval: 300
     use:
       - provider1
+
+  - name: "💬 即时通讯"
+    type: select
+    proxies:
+    - "♻️ 自动选择"
+    - "🇭🇰 香港节点"
+    - "🇺🇸 美国节点"
+    - "🇯🇵 日本节点"
+    - "🇸🇬 新加坡节点"
+    - "🇼🇸 台湾节点"
+    - "🇰🇷 韩国节点"
+    - "🇨🇦 加拿大节点"
+    - "🇬🇧 英国节点"
+    - "🇫🇷 法国节点"
+    - "🇩🇪 德国节点"
+    - "🇳🇱 荷兰节点"
+    - "🇹🇷 土耳其节点"
+    - "🌐 其他地区"
+    - "🚀 手动选择"
+    - "🎯 全球直连"
 
   - name: "🌐 社交媒体"
     type: select
@@ -685,7 +705,7 @@ proxy-groups:
   - name: "🇭🇰 香港节点"
     type: url-test
     url: https://www.gstatic.com/generate_204
-    filter: "(?i)(港|HK|Hong\s*Kong|HongKong|深港|🇭🇰)"
+    filter: "(?i)(港|HK|Hong Kong|HongKong|深港|🇭🇰)"
     use:
       - provider1
     interval: 300
