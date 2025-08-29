@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 212
+# TOTAL: 216
 
 payload:
   - '*quickconnect*'
@@ -34,6 +34,7 @@ payload:
   - '+.bsbsb.top'
   - '+.centbrowser.net'
   - '+.cg3da.com'
+  - '+.chaxunjiao.com'
   - '+.chaz.fun'
   - '+.checkip.dyndns.org'
   - '+.checkipv6.dyndns.org'
@@ -118,6 +119,7 @@ payload:
   - '+.ip6.seeip.org'
   - '+.ipapi.co'
   - '+.ipinfo.io'
+  - '+.ipshu.com'
   - '+.istoreos.com'
   - '+.jsdelivr.net'
   - '+.jxjktzjt.com'
@@ -183,6 +185,7 @@ payload:
   - '+.tangguobaohe.com'
   - '+.tcy365.net'
   - '+.thinkerride.com'
+  - '+.tool56.com'
   - '+.tumukaoyan.com'
   - '+.tuxing.art'
   - '+.u-carloan.com'
@@ -200,6 +203,7 @@ payload:
   - '+.wewillpro.com'
   - '+.wlcdn88.com'
   - '+.wwwh.eu.org'
+  - '+.xbgjw.com'
   - '+.xdqtech.com'
   - '+.xiankabao.com'
   - '+.xiaochuanyun.com'
