@@ -265,50 +265,19 @@ Traffic、GB、Expire
 
 ## 🙏 感谢
 
-**本项目项目使用或引用了以下内容**
+**本项目使用或引用了以下内容**
 
-以下排名不分先后
-
-### 🔌 插件
-- [vernesong/OpenClash](https://github.com/vernesong/OpenClash)
-
-### 🧩 内核
-- [MetaCubeX/mihomo](https://github.com/MetaCubeX/mihomo)
-
-### 🗂 模板
-- [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR)
-- [TraderWukong/demo](https://github.com/TraderWukong/demo)
-
-### 🛣 分流规则
-- [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
-- [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
-- [felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
-- [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
-- [dogfight360/UsbEAm](https://www.dogfight360.com/blog/18627/)
-- [ddgksf2013/ddgksf2013](https://github.com/ddgksf2013/ddgksf2013)
-- [mottzz87/crules](https://github.com/mottzz87/crules)
-
-### 🚫 广告过滤规则
-- [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters)
-- [privacy-protection-tools/anti-AD](https://github.com/privacy-protection-tools/anti-AD)
-- [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)
-- [Aethersailor/adblockfilters-modified](https://github.com/Aethersailor/adblockfilters-modified)
-
-### ⚡ 加速规则
-- [521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)
-
-### 🔄 订阅转换后端
-- [asdlokj1qpi233/subconverter](https://github.com/asdlokj1qpi233/subconverter)
-- [Aethersailor/subconverter](https://github.com/Aethersailor/subconverter)
-
-### 🧰 工具
-- [Aethersailor/Rule-Bot](https://github.com/Aethersailor/Rule-Bot)
-- [oooldtoy/SSTAP_ip_crawl_tool](https://github.com/oooldtoy/SSTAP_ip_crawl_tool)
-
-### 🔖 其他
-- [immortalwrt/user-FAQ](https://github.com/immortalwrt/user-FAQ/)
-- [OpenAI/ChatGPT](https://chatgpt.com/)
-- [Anysphere/Cursor](https://cursor.com/downloads)
+| 类别 | 项目 |
+|------|------|
+| 🔌 **插件** | [vernesong/OpenClash](https://github.com/vernesong/OpenClash) |
+| 🧩 **内核** | [MetaCubeX/mihomo](https://github.com/MetaCubeX/mihomo) |
+| 🗂 **模板** | [ACL4SSR/ACL4SSR](https://github.com/ACL4SSR/ACL4SSR) · [TraderWukong/demo](https://github.com/TraderWukong/demo) |
+| 🛣 **分流规则** | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) · [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) · [felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list) · [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) · [dogfight360/UsbEAm](https://www.dogfight360.com/blog/18627/) · [ddgksf2013/ddgksf2013](https://github.com/ddgksf2013/ddgksf2013) · [mottzz87/crules](https://github.com/mottzz87/crules) |
+| 🚫 **广告过滤规则** | [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) · [privacy-protection-tools/anti-AD](https://github.com/privacy-protection-tools/anti-AD) · [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule) · [Aethersailor/adblockfilters-modified](https://github.com/Aethersailor/adblockfilters-modified) |
+| ⚡ **加速规则** | [521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520) |
+| 🔄 **订阅转换后端** | [asdlokj1qpi233/subconverter](https://github.com/asdlokj1qpi233/subconverter) · [Aethersailor/subconverter](https://github.com/Aethersailor/subconverter) |
+| 🧰 **工具** | [Aethersailor/Rule-Bot](https://github.com/Aethersailor/Rule-Bot) · [oooldtoy/SSTAP_ip_crawl_tool](https://github.com/oooldtoy/SSTAP_ip_crawl_tool) |
+| 🔖 **其他** | [immortalwrt/user-FAQ](https://github.com/immortalwrt/user-FAQ/) · [OpenAI/ChatGPT](https://chatgpt.com/) · [Anysphere/Cursor](https://cursor.com/downloads) |
 
 ---
 
