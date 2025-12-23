@@ -9,11 +9,11 @@ C='\033[1;36m' # Cyan
 W='\033[1;37m' # White
 N='\033[0m'    # No Color
 
-# 定义符号
-INFO="${B}[INFO]${N}"
-WARN="${Y}[WARN]${N}"
+# 定义符号（统一宽度为7字符，确保输出对齐）
+INFO="${B}[INFO] ${N}"
+WARN="${Y}[WARN] ${N}"
 ERR="${R}[ERROR]${N}"
-OK="${G}[OK]${N}"
+OK="${G}[OK]   ${N}"
 
 # 打印分界线函数
 print_line() {
@@ -414,7 +414,7 @@ if [ "$CORE_TYPE" = "Smart" ]; then
       TMP_MODEL="/tmp/${MODEL_FILENAME}"
       TARGET_DIR="/etc/openclash"
       TARGET_FILE="$TARGET_DIR/Model.bin"
-      MODEL_URL="https://gh-proxy.com/https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/${MODEL_URL_SUFFIX}"
+      MODEL_URL="https://github-proxy.asailor.org/https://github.com/vernesong/mihomo/releases/download/LightGBM-Model/${MODEL_URL_SUFFIX}"
       
       mkdir -p "$TARGET_DIR"
       
@@ -424,11 +424,11 @@ if [ "$CORE_TYPE" = "Smart" ]; then
           exit 1
       fi
       
-      echo -e "$INFO 开始下载 ${MODEL_VERSION} (文件较大，请耐心等待)..."
+      echo -e "$INFO 开始使用 GitHub 镜像加速站点下载 ${MODEL_VERSION} (文件较大，请耐心等待)..."
       echo
       
-      # 重试机制：最多尝试 3 次
-      MAX_RETRIES=3
+      # 重试机制：最多尝试 5 次
+      MAX_RETRIES=5
       RETRY_COUNT=0
       DOWNLOAD_SUCCESS=0
       
@@ -437,9 +437,9 @@ if [ "$CORE_TYPE" = "Smart" ]; then
         # -C - : 断点续传
         # --retry 3 : 连接失败时重试 3 次
         # --retry-delay 2 : 重试间隔 2 秒
+        # --progress-bar : 简洁的进度条模式（仅显示进度条和百分比）
         # --http2 : 启用 HTTP/2
-        # 默认输出模式会显示：下载速度、已下载大小、总大小、进度百分比、剩余时间
-        curl -C - -L --fail --retry 3 --retry-delay 2 --connect-timeout 30 --max-time 1200 --insecure --http2 -o "$TMP_MODEL" "$MODEL_URL"
+        curl -C - -L --fail --retry 3 --retry-delay 2 --connect-timeout 30 --max-time 1200 --insecure --http2 --progress-bar -o "$TMP_MODEL" "$MODEL_URL"
         
         if [ $? -eq 0 ] && [ -s "$TMP_MODEL" ]; then
           DOWNLOAD_SUCCESS=1
@@ -465,7 +465,7 @@ if [ "$CORE_TYPE" = "Smart" ]; then
       else
         echo -e "$ERR 下载失败（已重试 $MAX_RETRIES 次）。"
         [ -f "$TMP_MODEL" ] && rm -f "$TMP_MODEL"
-        exit 1
+        echo -e "$WARN Smart 内核将以基础模式运行（无 LGBM 模型）。"
       fi
     fi
   else
@@ -483,13 +483,13 @@ print_step "步骤 9/10: 更新数据库与规则资源"
 update_res() {
     NAME=$1
     SCRIPT=$2
-    echo -e "$INFO 正在更新 $NAME..."
+    echo -e "${INFO} 正在更新 ${NAME}..."
     $SCRIPT
     if [ $? -eq 0 ]; then
-        echo -e "$OK $NAME 更新完成。"
+        echo -e "${OK} ${NAME} 更新完成。"
         echo
     else
-        echo -e "$ERR $NAME 更新失败。"
+        echo -e "${ERR} ${NAME} 更新失败。"
         exit 1
     fi
 }
@@ -500,13 +500,13 @@ update_res "GeoSite 数据库" "/usr/share/openclash/openclash_geosite.sh"
 update_res "GeoASN 数据库" "/usr/share/openclash/openclash_geoasn.sh"
 update_res "大陆 IP 白名单" "/usr/share/openclash/openclash_chnroute.sh"
 
-echo -e "$INFO 正在更新订阅..."
+echo -e "${INFO} 正在更新订阅..."
 /usr/share/openclash/openclash.sh
 if [ $? -ne 0 ]; then
-    echo -e "$ERR 订阅更新失败，请检查日志。"
+    echo -e "${ERR} 订阅更新失败，请检查日志。"
     exit 1
 fi
-echo -e "$OK 订阅更新完成。"
+echo -e "${OK} 订阅更新完成。"
 sleep 1
 
 # 10. 启动
