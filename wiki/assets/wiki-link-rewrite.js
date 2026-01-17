@@ -1,5 +1,6 @@
 (() => {
   const INTERNAL_PAGE_RE = /^(?:\\d+)\\.(.+)$/;
+  const DOC_PATH_RE = /^(?:\\.\\/|\\.\\.\\/|\\/)*doc\\/(.+)$/;
 
   const buildPageMap = () => {
     const map = new Map();
@@ -36,7 +37,12 @@
         last = last.slice(0, -5);
       }
 
-      const decoded = decodeURIComponent(last);
+      let decoded;
+      try {
+        decoded = decodeURIComponent(last);
+      } catch {
+        return;
+      }
       const match = decoded.match(INTERNAL_PAGE_RE);
       if (!match) {
         return;
@@ -80,7 +86,12 @@
         return;
       }
 
-      const pageSlug = decodeURIComponent(parts.slice(3).join("/"));
+      let pageSlug;
+      try {
+        pageSlug = decodeURIComponent(parts.slice(3).join("/"));
+      } catch {
+        return;
+      }
       if (!pageSlug) {
         return;
       }
@@ -94,9 +105,42 @@
     });
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", rewriteWikiLinks);
-  } else {
+  const rewriteDocImages = () => {
+    const siteRoot =
+      typeof __md_scope === "object" && __md_scope instanceof URL
+        ? __md_scope
+        : new URL("..", window.location.href);
+    const images = document.querySelectorAll("img[src]");
+    images.forEach((img) => {
+      const rawSrc = img.getAttribute("src");
+      if (!rawSrc || /^(?:[a-z]+:)?\\/\\//i.test(rawSrc)) {
+        return;
+      }
+
+      const match = rawSrc.match(DOC_PATH_RE);
+      if (!match) {
+        return;
+      }
+
+      const docPath = match[1].replace(/^\\/+/, "");
+      let resolved;
+      try {
+        resolved = new URL(`doc/${docPath}`, siteRoot);
+      } catch {
+        return;
+      }
+      img.setAttribute("src", resolved.href);
+    });
+  };
+
+  const rewriteAll = () => {
     rewriteWikiLinks();
+    rewriteDocImages();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", rewriteAll);
+  } else {
+    rewriteAll();
   }
 })();
