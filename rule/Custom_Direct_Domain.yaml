@@ -1,12 +1,13 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 487
+# TOTAL: 489
 
 payload:
   - '*m-team*'
   - '*quickconnect*'
   - '*synology*'
+  - '+.0044696.com'
   - '+.03241119.xyz'
   - '+.112114.xyz'
   - '+.115cdn.de'
@@ -42,6 +43,7 @@ payload:
   - '+.aichangbaishan.com'
   - '+.aidien.fun'
   - '+.aigodlike.com'
+  - '+.aisnogames.com'
   - '+.aistudio-app.com'
   - '+.akamaihd.net'
   - '+.akamaized.net'
