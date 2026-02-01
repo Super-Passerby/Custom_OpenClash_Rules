@@ -1,7 +1,7 @@
 # Generated from rule/Custom_Direct.list
 # REPO: https://github.com/Aethersailor/Custom_OpenClash_Rules
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
-# TOTAL: 483
+# TOTAL: 486
 
 payload:
   - '*m-team*'
@@ -196,6 +196,7 @@ payload:
   - '+.gzybao.com'
   - '+.halvie.com'
   - '+.ham.xin'
+  - '+.hangnakeji.com'
   - '+.haoxueche.com'
   - '+.harbourmooc.com'
   - '+.hbcof.com'
@@ -211,6 +212,7 @@ payload:
   - '+.hsbc.com.hk'
   - '+.hstbroker.com'
   - '+.hszq6.com'
+  - '+.htkgsx.com'
   - '+.hub.crdz.gq'
   - '+.hub.gitmirror.com'
   - '+.hub.rat.dev'
@@ -230,6 +232,7 @@ payload:
   - '+.ilucky.net'
   - '+.imacos.top'
   - '+.immortalwrt.org'
+  - '+.iosgujian.com'
   - '+.iotrix.net'
   - '+.ip159.com'
   - '+.ip6.seeip.org'
